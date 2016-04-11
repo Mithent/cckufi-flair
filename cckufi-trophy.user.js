@@ -60,7 +60,7 @@
 	var trophyCaseBody = trophyCase.lastElementChild;
 
 	if (!trophyCaseBody) {
-		// Accounts with no tropies have a "dust" div as a sibling of the table
+		// Accounts with no trophies have a "dust" div as a sibling of the table
 		trophyCase.parentNode.removeChild(document.querySelector("div.dust"));
 		
 		trophyCaseBody = document.createElement("tbody");
