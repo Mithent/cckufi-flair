@@ -34,7 +34,7 @@
 	function addTrophy(parent, colspan) {
 		var trophyCell = document.createElement("td");
 		trophyCell.setAttribute("colspan", colspan);
-		parent.insertBefore(trophyCell, null;)
+		parent.insertBefore(trophyCell, null);
 		
 		var trophyDiv = document.createElement("div");
 		trophyCell.insertBefore(trophyDiv, null);
@@ -50,7 +50,7 @@
 		trophyText.className = "trophy-name";
 		trophyText.textContent = "Robin Survivor";
 		trophyDiv.insertBefore(document.createElement("br"), null);
-	}
+	};
 
 	var trophyCase = trophies();
 	if (!trophies) return;
