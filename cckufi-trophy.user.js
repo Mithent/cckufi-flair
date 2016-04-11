@@ -34,6 +34,7 @@
 	function addTrophy(parent, colspan) {
 		var trophyCell = document.createElement("td");
 		trophyCell.colSpan = colspan;
+		trophyCell.className = "trophy-info";
 		parent.insertBefore(trophyCell, null);
 		
 		var trophyDiv = document.createElement("div");
