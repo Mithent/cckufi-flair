@@ -4,9 +4,9 @@
 // @description Gives members of the exclusive ccKufi Robin Room a trophy
 // @author      Mithent, lachlanhunt, joefarebrother
 // @updateURL   https://github.com/Mithent/cckufi-flair/raw/master/cckufi-trophy.user.js
-// @include     https://www.reddit.com/*
-// @include     https://np.reddit.com/*
-// @include     https://m.reddit.com/*
+// @include     https://www.reddit.com/user/*
+// @include     https://np.reddit.com/user/*
+// @include     https://m.reddit.com/user/*
 // @version     0.1.0
 // @grant       none
 // ==/UserScript==
