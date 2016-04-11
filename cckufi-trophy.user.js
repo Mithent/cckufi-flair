@@ -32,22 +32,22 @@
 		var trophyCell = document.createElement("td");
 		trophyCell.colSpan = colspan;
 		trophyCell.className = "trophy-info";
-		parent.insertBefore(trophyCell, null);
+		parent.appendChild(trophyCell);
 		
 		var trophyDiv = document.createElement("div");
-		trophyCell.insertBefore(trophyDiv, null);
+		trophyCell.appendChild(trophyDiv);
 		
 		var trophyImage = document.createElement("img");
 		trophyImage.className = "trophy-icon";
 		trophyImage.src = imageSrc;
-		trophyDiv.insertBefore(trophyImage, null);
+		trophyDiv.appendChild(trophyImage);
 		
-		trophyDiv.insertBefore(document.createElement("br"), null);
+		trophyDiv.appendChild(document.createElement("br"));
 		
 		var trophyText = document.createElement("span");
 		trophyText.className = "trophy-name";
 		trophyText.textContent = "Robin Survivor";
-		trophyDiv.insertBefore(trophyText, null);
+		trophyDiv.appendChild(trophyText);
 	};
 
 	var trophyCase = trophies();
@@ -73,7 +73,7 @@
 
 	if (lastTrophyRow.children.length % 2 == 0) {
 		var newRow = document.createElement("tr");
-		trophyCaseBody.insertBefore(newRow, null);
+		trophyCaseBody.appendChild(newRow);
 		addTrophy(newRow, 2);
 	} else {
 		lastTrophyRow.lastElementChild.colSpan = 1;
