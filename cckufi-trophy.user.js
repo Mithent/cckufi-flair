@@ -57,9 +57,20 @@
 	if (!trophies) return;
 	
 	var trophyCaseBody = trophyCase.lastElementChild;
-	var lastTrophyRow = trophyCaseBody.lastElementChild;
+
+	if (!trophyCaseBody) {
+		// Accounts with no tropies have a "dust" div as a sibling of the table
+		trophyCase.parentNode.removeChild(document.querySelector("div.dust"));
+		
+		trophyCaseBody = document.createElement("tbody");
+		trophyCase.appendChild(trophyCaseBody);
+		
+		trophyCaseBody.appendChild(document.createElement("tr"));
+	}
 	
-	if (lastTrophyRow.children.length == 2) {
+	var lastTrophyRow = trophyCaseBody.lastElementChild;
+
+	if (lastTrophyRow.children.length % 2 == 0) {
 		var newRow = document.createElement("tr");
 		trophyCaseBody.insertBefore(newRow, null);
 		addTrophy(newRow, 2);
